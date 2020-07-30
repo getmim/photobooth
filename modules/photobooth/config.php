@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'photobooth',
-    '__version' => '0.0.1',
+    '__version' => '0.0.2',
     '__git' => 'git@github.com:getmim/photobooth.git',
     '__license' => 'MIT',
     '__author' => [
@@ -23,6 +23,9 @@ return [
             ],
             [
                 'lib-user' => NULL
+            ],
+            [
+                'lib-media' => NULL 
             ]
         ],
         'optional' => []
@@ -58,7 +61,8 @@ return [
                     'type' => 'text'
                 ],
                 'images' => [
-                    'type' => 'json'
+                    'type' => 'media-list',
+                    'separator' => 'json'
                 ],
                 'updated' => [
                     'type' => 'date'
